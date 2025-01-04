@@ -11,6 +11,10 @@ import matplotlib
 matplotlib.use("Agg")  # For headless environments
 import matplotlib.pyplot as plt
 
+import logging
+
+
+
 app = Flask(__name__)
 
 # --------------------------------------------------------------------
@@ -159,4 +163,8 @@ def settings_page():
 # MAIN
 # --------------------------------------------------------------------
 if __name__ == "__main__":
-    app.run(debug=True, threaded=True)
+    # Set Logging level to ERROR
+    log = logging.getLogger('werkzeug')
+    log.setLevel(logging.ERROR)
+    # Run the app
+    app.run(debug=False, threaded=True)
