@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Settings{% endblock %}
+
+{% block extra_css %}
+<!-- Could link a settings.css if needed -->
+{% endblock %}
+
+{% block body_content %}
+<div class="settings-container">
+    <h1>Update Message</h1>
+    <form method="POST">
+        <label for="message">Message:</label>
+        <input type="text" id="message" name="message" value="{{ message }}" />
+        <button type="submit">Save</button>
+    </form>
+    <p><a class="btn" href="{{ url_for('clock_page') }}" target="_blank">View Dashboard</a></p>
+</div>
+{% endblock %}

@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", Arial, sans-serif;
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+/* Container for the entire page (excluding left menu) */
+.body-container {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+/* Left menu styling */
+.left-menu {
+  width: 15%;
+  background-color: #1e1e1e;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 2px 0 6px rgba(0,0,0,0.6);
+}
+
+.menu-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.menu-btn {
+  background-color: #2e2e2e;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 12px;
+  border-radius: 4px;
+  display: block;
+}
+
+.menu-btn:hover {
+  background-color: #444;
+}
+
+/* Main content area */
+.main-content {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding: 20px;
+  background-color: #1e1e1e;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.nav-items {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-items a {
+  color: #999;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.nav-items a:hover {
+  color: #fff;
+}
+
+/* Dashboard container (wraps the widgets + settings button) */
+.dashboard-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+}
+
+.widgets {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.widget-card {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.clock-card {
+  height: 300px;
+}
+
+.plot-card {
+  height: 400px;
+}
+
+.widget-card iframe {
+  flex: 1;
+  border: none;
+  width: 100%;
+  height: 100%;
+  background-color: #121212;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #1e1e1e;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* Settings button in the main page */
+.settings-btn {
+  display: inline-block;
+  background-color: #2e2e2e;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 16px;
+  margin-top: 10px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.settings-btn:hover {
+  background-color: #444;
+}

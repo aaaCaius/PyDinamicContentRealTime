@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}My Dark Dashboard{% endblock %}
+
+{% block extra_css %}
+<!-- Could reference additional CSS if needed -->
+{% endblock %}
+
+{% block body_content %}
+<div class="body-container">
+
+    <!-- Left menu -->
+    <div class="left-menu">
+        <div class="menu-title">Menu</div>
+        <a class="menu-btn" href="#">Home</a>
+        <a class="menu-btn" href="#">Reports</a>
+        <a class="menu-btn" href="#">Settings</a>
+        <a class="menu-btn" href="#">Logs</a>
+        <a class="menu-btn" href="#">Profile</a>
+    </div>
+
+    <!-- Main content -->
+    <div class="main-content">
+        <header>
+            <h1>My Dark Dashboard</h1>
+            <div class="nav-items">
+                <a href="#">Dashboard</a>
+                <a href="{{ url_for('settings_page') }}" target="_blank">Settings</a>
+            </div>
+        </header>
+
+        <div class="dashboard-container">
+            <div class="widgets">
+                <div class="widget-card clock-card">
+                    <iframe src="{{ url_for('clock_content') }}"></iframe>
+                </div>
+
+                <div class="widget-card plot-card">
+                    <iframe src="{{ url_for('plot_content') }}"></iframe>
+                </div>
+            </div>
+
+            <p>
+                <a class="settings-btn" href="{{ url_for('settings_page') }}" target="_blank">Open Settings</a>
+            </p>
+        </div>
+
+        <footer>&copy; 2025 My Dashboard. All rights reserved.</footer>
+    </div>
+</div>
+{% endblock %}

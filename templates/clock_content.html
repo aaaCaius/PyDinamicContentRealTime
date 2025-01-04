@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Clock Widget</title>
+    <meta http-equiv="refresh" content="0.84">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/clock_content.css') }}">
+</head>
+<body>
+<div class="time">{{ now_str }}</div>
+<div class="message">Message: {{ message }}</div>
+</body>
+</html>
